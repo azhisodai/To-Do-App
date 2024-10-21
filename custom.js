@@ -13,11 +13,13 @@ function addTask() {
   const taskText = taskInput.value;
   console.log(taskText);
 
-  if (taskText) {
+  if (taskText.trim().length > 0) {
     addTaskToDom(taskText);
     saveTaskToLocalStorage(taskText);
     taskInput.value = "";
+    debugger;
   }
+  
 }
 
 // Add Task to DOM
